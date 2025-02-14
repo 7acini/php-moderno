@@ -12,11 +12,24 @@
         <br>
         <p>Gerando um nº aleatório entre 0 e 100...</p>
         <?php 
-        $randomNumber = random_int(0,100);
+        $randomNumber = mt_rand(0,100);
         echo "valor gerado foi $randomNumber";
         ?>
-        <input type="button" value="Gerar outro" onclick="window.location.reload()">
+        <button onclick="javascript:document.localtion.reload()">Gerar outro</button>
         
     </section>
 </body>
 </html>
+
+<?php 
+/*
+rand() = 1951 - Linear Congretial Generator     
+Função mais usada e antiga do PHP 
+mt_rand() = 1997 - Marsenne Twister
+Função 4x + rápida que o rand()
+Obs: A partir do PHP 7.1, rand() é um simples apontamento para mt_rand()
+
+random_int() gera números aleatórios criptograficamente seguros
+*/
+
+?>
