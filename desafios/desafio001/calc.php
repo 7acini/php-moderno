@@ -11,7 +11,7 @@
         <h1>Resultado final</h1>
         <?php 
 
-        $number = $_GET["number"];
+        $number = $_GET["number"] ?? 0; // Atribui um valor padrão(0), caso não preenchido.
         $ant_number = $number - 1;
         $suss_number = $number + 1;
         echo "O numero escolhido foi <strong>$number</strong> <br>";
