@@ -264,3 +264,46 @@ base_convert(254, 10, 16); // 0xfe
 base_convert(1101, 2, 10); // 11
 // conversão de Binario para Decimal
 ```
+# Capítulo 6: Superglobais no PHP
+
+Às Superglobais em PHP são variaveis que armazenam  em um array, cada parâmetro sendo ela uma requisição(GET, POST ou Ambas), um Cookie, Sessão, Variáveis de ambiente etc…
+
+## 6.1 $_GET
+
+A superglobal GET armazena os parâmetros enviados ao servidor utilizando a requisição GET do HTTP.
+
+A requisição GET pode ser enviada de diferentes formas, sendo elas a passagem de parâmetros via URL ou a passagem via requisição HTTP manual.
+
+A passagem de parâmetros via URL, funciona com o 1º parâmetro ter ? antecedendo o mesmo e caso tenham outros parâmetros os mesmos devem ter um & separando-os.
+
+```jsx
+https://example.com/index.php?user=admin&password=admin123
+```
+
+Conseguindo obter o mesmo resultado através de uma requisição HTTP manual, utilizando por exemplo o cURL na passagem de parâmetro:
+
+```jsx
+GET /?user=admin&password=admin123 HTTP/1.1
+Host: exemple.com
+Connection: close
+```
+![get.png](downloads/d013/imagens/notes/get.png)
+## 6.2 $_POST
+
+A superglobal POST assim com a GET enviam parâmetros ao servidor, porém utilizando a requisição POST do HTTP.
+
+Também podendo ser enviadas requisições manuais utilizando clients HTTP como cURL, o POST envia comumente seus parâmentros através de PAYLOADS, que funcionam como rodapé da requisição.
+
+```jsx
+POST /login HTTP/1.1
+Host: exemple.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 29
+
+user=admin&password=admin123
+```
+![post.png](downloads/d013/imagens/notes/post.png)
+## 6.3 $_REQUEST
+
+Já a superglobal REQUEST armazena ambos tipos de requisição, sendo ele GET ou POST variando somente qual é armazenado primeiro. Se enviados juntos o GET sempre será armazenado primeiro, pois é uma requisição mais simples sendo mais rápido seu processamento.
+![request.png](downloads/d013/imagens/notes/request.png)
