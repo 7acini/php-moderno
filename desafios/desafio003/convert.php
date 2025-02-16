@@ -14,8 +14,12 @@
         $moneyReais = (float) $_GET["money"];
         $moneyDolar = $moneyReais / COTACAO;
 
-        echo "Seus R$ ".number_format($moneyReais, 2)." equivalem a US$ <strong>".number_format($moneyDolar, 2)."</strong> <br>";
-        echo "Cotação fixa de R$ " . number_format(COTACAO, 2) . " informada diretamente no código <br>" ;
+        // Formatação de moedas com Internacionalização
+        //Biblioteca intl (Internationalization Functions 
+        $padrao = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
+
+        echo "Seus R$ ".numfmt_format_currency($padrao, $moneyReais, "BRL")." equivalem a US$ <strong>".numfmt_format_currency($padrao, $moneyDolar, "USD")."</strong> <br>";
+        echo "Cotação fixa de R$ " . numfmt_format_currency($padrao, COTACAO, "USD") . " informada diretamente no código <br>" ;
         ?>
         <input type="button" value="Voltar" onclick="history.go(-1)">
     </section>
