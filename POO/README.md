@@ -1,6 +1,6 @@
 # **Curso PHP POO: [40 HORAS]**
 
-# Capitulo 1: O que é um Objeto?
+# Aula Teórica 2 – O que é um Objeto?
 
 Na definição dos livros, um objeto é:
 
