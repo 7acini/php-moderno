@@ -111,7 +111,6 @@ O diagrama de Classes é utilizado para a representação de Classes, em um prog
 	</table>
 	<div>
 		<p>Nesse caso representamos a Classe como cabeçalho da “tabela”. Já os Atributos são representados com seu nome um em baixo do outro, os Métodos são semelhantes aos atributos, porém em seu final, os mesmos procedem com a abertura e fechamentos de parênteses( `()` ).</p>
-
 		<p>Já para exibir os modificadores de visibilidade, o Diagrama de Classes, utiliza os símbolos:</p>
 		<ul>
 			<li>Publico ( `+` )</li>
@@ -120,6 +119,7 @@ O diagrama de Classes é utilizado para a representação de Classes, em um prog
 		</ul>
 	</div>
 </div>
+
 ## 3.2 Modificadores de Visibilidade
 
 Os modificador de visibilidades são palavras reservadas que realizam um permissionamento de utilizadores de determinado Atributo ou Método, sendo eles: público, privado e protegido.
@@ -137,3 +137,22 @@ Já a visualização privada, garante que somente a classe em que os atributos o
 ### 3.2.3 Protegido
 
 O método Protegido faz que seu Atributo/Método possa ser acessado na Classe Mãe e filhas através de Herança.
+
+# Aula 4 - Métodos Especiais (Get, Set e Contruct)
+
+Os métodos Getter e Setter não são regras, mas sim padrões que promovem mais segurança e legibilidade.
+
+<img src="./images/Getter.png" style="float:right;width:3.8%">
+
+## 4.1 Getter
+O Getter é um método que permite que você pegue alguma informação, mas não diretamente, sendo ele o terceiro entre você e a informação, através da manipulação dos métodos acessores.
+
+<img src="./images/Setter.png" style="float:right;width:3.8%">
+
+## 4.2 Setter
+Já o Setter, é o método que permite a modificação dos atributos sem a alteração direta dos mesmos, modioficando somente o atributos do Objeto criado, e não da classe em si.
+
+<img src="./images/Construct.png" style="float:right;width:3.8%">
+
+## 4.3 Construct
+O método construtor é um método que obtem muitas funções, onde permite a leitura de atributos contidos no mesmo, pois são publicos. Porém, sua principal funcionalidade é que o mesmo é carregado no momento de criação de objeto, permitindo na criação da definição de valores padrões.
