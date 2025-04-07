@@ -156,3 +156,24 @@ Já o Setter, é o método que permite a modificação dos atributos sem a alter
 
 ## 4.3 Construct
 O método construtor é um método que obtem muitas funções, onde permite a leitura de atributos contidos no mesmo, pois são publicos. Porém, sua principal funcionalidade é que o mesmo é carregado no momento de criação de objeto, permitindo na criação da definição de valores padrões.
+
+# Aula 5 - Exemplo Prático com Objetos
+
+Como exemplo prático, o profº Gustavo Guanabara, trouxe o exemplo de uma conta no Banco, onde devemos criar um "programa" que simule tais operações, trazendo alguns atributos e métodos para esse exemplo, como:
+
+> Todos os atributos teram Getters e Setters
+
+| ContaBanco |
+|------------|
+| + numConta |
+| # tipo |
+| - dono |
+| - saldo |
+| - status 
+| |
+| + abrirConta() |
+| + fecharConta() |
+| + depositar() |
+| + sacar() |
+| + pagarMensal() |
+
