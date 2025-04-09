@@ -75,7 +75,7 @@ class ContaBanco{
         }
     }
     public function sacar(float $valor) {
-        if($this->getStatus() && $this->getSaldo() > $valor) {
+        if($this->getStatus() && $this->getSaldo() >= $valor) {
             $this->setSaldo($this->getSaldo() - $valor);
         }
         else{
