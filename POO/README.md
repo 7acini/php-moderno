@@ -161,19 +161,7 @@ O método construtor é um método que obtem muitas funções, onde permite a le
 
 Como exemplo prático, o profº Gustavo Guanabara, trouxe o exemplo de uma conta no Banco, onde devemos criar um "programa" que simule tais operações, trazendo alguns atributos e métodos para esse exemplo, como:
 
-> Todos os atributos teram Getters e Setters
+> Todos os atributos teram Getters e Setters o sua estrutura deverá seguir p modelo abaixo...
 
-| ContaBanco |
-|------------|
-| + numConta |
-| # tipo |
-| - dono |
-| - saldo |
-| - status 
-| |
-| + abrirConta() |
-| + fecharConta() |
-| + depositar() |
-| + sacar() |
-| + pagarMensal() |
+<img src="./images/Modelo.png" style="float:right">
 
