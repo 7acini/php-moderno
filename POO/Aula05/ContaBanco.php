@@ -8,8 +8,8 @@ class ContaBanco{
     private bool $status;
 
     public function __construct(){
-        $this->saldo = 0;
-        $this->status = false;
+        $this->setSaldo(0);
+        $this->setStatus(false);
     }
 
     public function getNumConta(): int{
@@ -55,7 +55,7 @@ class ContaBanco{
     }
 
     public function fecharConta(){
-        if($this->getSaldo() >= 0){
+        if($this->getSaldo() > 0){
             echo "Conta com dinheiro";
         }
         elseif($this->getSaldo() < 0) {
@@ -67,7 +67,7 @@ class ContaBanco{
     }
 
     public function depositar(float $valor) {
-        if($this->getStatus() == true) {
+        if($this->getStatus()) {
             $this->setSaldo($this->getSaldo() + $valor);
         }
         else{
@@ -75,7 +75,7 @@ class ContaBanco{
         }
     }
     public function sacar(float $valor) {
-        if($this->getStatus() == true) {
+        if($this->getStatus() && $this->getSaldo() > $valor) {
             $this->setSaldo($this->getSaldo() - $valor);
         }
         else{
